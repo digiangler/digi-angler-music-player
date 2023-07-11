@@ -1,4 +1,3 @@
-import Sidebar from '@/components/Sidebar';
 import type { Metadata } from 'next';
 import { Noto_Sans_JP } from 'next/font/google';
 import './globals.css';
@@ -21,9 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="jp">
-      <body className={font.className}>
-        <Sidebar>{children}</Sidebar>
-      </body>
+      <body className={font.className}>{children}</body>
     </html>
   );
 }
