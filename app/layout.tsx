@@ -1,10 +1,16 @@
 import Sidebar from '@/components/Sidebar';
+import ModalProvider from '@/providers/ModalProvider';
+import SupabaseProvider from '@/providers/SupabaseProvider';
+import ToasterProvider from '@/providers/ToasterProvider';
+import UserProvider from '@/providers/UserProvider';
+
 import type { Metadata } from 'next';
 import { Noto_Sans_JP } from 'next/font/google';
+
 import './globals.css';
 
 const font = Noto_Sans_JP({
-  weight: ['400', '500'],
+  weight: ['400', '500', '700'],
   subsets: ['latin'],
   display: 'swap',
 });
@@ -22,7 +28,13 @@ export default function RootLayout({
   return (
     <html lang="jp">
       <body className={font.className}>
-        <Sidebar>{children}</Sidebar>
+        <ToasterProvider />
+        <SupabaseProvider>
+          <UserProvider>
+            <ModalProvider />
+            <Sidebar>{children}</Sidebar>
+          </UserProvider>
+        </SupabaseProvider>
       </body>
     </html>
   );
