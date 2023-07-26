@@ -2,6 +2,8 @@ import getSongs from '@/actions/getSongs';
 import Header from '@/components/Header';
 import ListItem from '@/components/ListItem';
 
+import PageContent from './components/PageContent';
+
 export const revalidate = 0;
 
 export default async function Home() {
@@ -25,7 +27,7 @@ export default async function Home() {
         <div className="flex items-center justify-between">
           <h1 className="text-white text-2xl font-semibold">最新の曲</h1>
         </div>
-        <div>曲のリスト</div>
+        <PageContent songs={songs} />
       </div>
     </div>
     /* TODO: 2:56:50からYouTune再生 */
