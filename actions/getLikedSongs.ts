@@ -25,4 +25,3 @@ const getLikedSongs = async (): Promise<Song[]> => {
 };
 
 export default getLikedSongs;
-/* TODO: 3:51:44からYouTune再生 */

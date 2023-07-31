@@ -47,4 +47,3 @@ const LikedContent: React.FC<LikedContentProps> = ({ songs }) => {
 };
 
 export default LikedContent;
-/* TODO: 4:03:10からYouTune再生 */

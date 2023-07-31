@@ -8,9 +8,10 @@ export const revalidate = 0;
 
 export default async function Home() {
   const songs = await getSongs();
+
   return (
+    /* TODO: 朝「おはよう」、昼「こんにちは」、夜「こんばんは」を表示されるように変更する */
     <div className="bg-neutral-900 rounded-lg h-full w-full overflow-hidden overflow-y-auto">
-      {/* Digi-Angler Music Player - メイン・コンテンツ */}
       <Header>
         <div className="mb-2">
           <h1 className="text-white text-3xl font-semibold">おはよう</h1>
@@ -30,6 +31,5 @@ export default async function Home() {
         <PageContent songs={songs} />
       </div>
     </div>
-    /* TODO: 2:56:50からYouTune再生 */
   );
 }

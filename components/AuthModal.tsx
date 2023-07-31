@@ -19,7 +19,7 @@ const AuthModal = () => {
   const router = useRouter();
   const { session } = useSessionContext();
   const { onClose, isOpen } = useAuthModal();
-  /* TODO: 2:13:25からYouTune再生 */
+
   useEffect(() => {
     if (session) {
       router.refresh();
